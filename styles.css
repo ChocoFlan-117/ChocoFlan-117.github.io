@@ -4,14 +4,12 @@ body {
     background-color: #9E2A2F;
     text-align: center; 
     font-family: "Lobster Two", sans-serif;
-    font-style: normal;
 }
 
 /* Header*/
 h1 {
     text-align: center;
     font-family: "Cinzel", serif;
-    font-style: normal;
 }
 
 /* Navigation bar */
@@ -28,5 +26,12 @@ h1 {
     background-color: #D2C29F;
 
     font-family: "Rock Salt", cursive;
-    font-style: normal;
+}
+
+/* Navigation bar unordered list */
+.navbar ul {
+    list-style-type: none; /* Remove the bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Displays the list items horizontally */
 }
