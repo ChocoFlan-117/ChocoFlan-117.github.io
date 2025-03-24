@@ -1,18 +1,18 @@
 
-/* Background color */
+/* Background color
 body {
     background-color: #9E2A2F;
     text-align: center; 
     font-family: "Lobster Two", sans-serif;
 }
 
-/* Header*/
+/* Header
 h1 {
     text-align: center;
     font-family: "Cinzel", serif;
 }
 
-/* Navigation bar */
+/* Navigation bar
 .navbar {
     margin: 0;
     padding: 15px;
@@ -28,10 +28,63 @@ h1 {
     font-family: "Rock Salt", cursive;
 }
 
-/* Navigation bar unordered list */
+/* Navigation bar unordered list
 .navbar ul {
-    list-style-type: none; /* Remove the bullet points */
+    list-style-type: none; /* Remove the bullet points 
     padding: 0;
     margin: 0;
-    display: flex; /* Displays the list items horizontally */
+    display: flex; /* Displays the list items horizontally
+} */
+
+
+/* Full screen background setup */
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    font-family: Arial, sans-serif;
 }
+  
+  /* Creating stars using pseudo-elements */
+.stars::before, .stars::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200vw; /* Extra width for smoother animation */
+    height: 200vh;
+    background: radial-gradient(white, rgba(255, 255, 255, 0) 80%);
+    background-size: 2px 2px;
+    animation: twinkle 8s infinite alternate ease-in-out;
+}
+  
+  /* Slight variation for a more natural star effect */
+.stars::after {
+    background-size: 3px 3px;
+    animation-duration: 12s;
+    opacity: 0.8;
+}
+  
+  /* Twinkling animation using keyframes */
+@keyframes twinkle {
+    0% {
+      transform: translateY(-5%) rotate(0deg);
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateY(5%) rotate(360deg);
+      opacity: 1;
+    }
+}
+  
+  /* Header style */
+h1 {
+    font-size: 3rem;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+  
