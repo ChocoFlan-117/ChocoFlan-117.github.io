@@ -1,0 +1,138 @@
+
+/* Background color
+body {
+    background-color: #9E2A2F;
+    text-align: center; 
+    font-family: "Lobster Two", sans-serif;
+}
+
+/* Header
+h1 {
+    text-align: center;
+    font-family: "Cinzel", serif;
+}
+
+/* Navigation bar
+.navbar {
+    margin: 0;
+    padding: 15px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #D2C29F;
+
+    font-family: "Rock Salt", cursive;
+} */
+
+.navbar ul {
+    list-style: none; /* Remove the bullet points */
+    gap: 60px; /*adds space between links */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Displays the list items horizontally */
+    justify-content: center; /* centers items horizontally */
+}
+
+.navbar a {
+    position: relative;
+    color: #74d4d4;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a::before, .navbar a::after {
+    content: attr(href); /* grabs the text from href */
+    position: absolute; /* so we can move it freely */
+    overflow: hidden;
+    color: #6bc2eb;
+    clip: rect(0, 0, 0, 0); /*hides it intitially */
+    pointer-events: none; /* doesn't block your clicks */
+}
+
+.navbar a:hover::before {
+    animation: glitchTop 0.5s linear infinite;
+    color: #3eb1fd; 
+}
+
+.navbar a:hover::after {
+    animation: glitchBottom 0.5s linear infinite;
+    color: #87ddff;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 10px #00ffff33; /* faint glow around */
+
+    padding: 10px 20px; /* space *inside* the box */
+    margin-top: 30px /* space *outside* the box */
+}
+
+@keyframes glitchTop {
+    0% {
+        clip: rect(0, 9999px, 5px, 0);
+        transform: translate(1px, -2px);
+    }
+}
+
+@keyframes glitchBottom {
+    0% {
+        clip: rect(25px, 9999px, 30px, 0);
+        transform: translate(-1px, 2px);
+    }
+}
+
+/* Full screen background setup
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    font-family: Arial, sans-serif;
+} */
+  
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Make the whole body fullscreen and add a background color */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #200631;
+    overflow: hidden; /* Hides anything that goes outside the element's boundaries */
+    position: relative;
+}
+
+* {
+    cursor: url('../assets/Stray\ icon\ cursor.png'), auto; /* Changes the cursor/mouse into the Stray icon */
+}
+
+/* Basic content styling */
+.content {
+    position: relative;
+    z-index: 1;
+    color: #F1F1F1; /* White text */
+    text-align: center;
+    padding-top: 50px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+}
