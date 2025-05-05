@@ -101,6 +101,22 @@ body {
 } */
   
 
+/* wiki bio box */
+.wiki-card {
+    display: flex;
+    background-color: rgb(167, 46, 46);
+    box-shadow: 0 0 10px rgb(245, 13, 13);
+    width: 200px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0 0 660px;
+}
+
+.wiki-writing {
+    
+}
+
 /* Basic Reset */
 * {
     margin: 0;
@@ -115,8 +131,7 @@ body {
     overflow: hidden; /* Hides anything that goes outside the element's boundaries */
     position: relative;
 
-    justify-content: center; /* centers horizontally */
-    align-items: center; /* centers vertically */
+    text-align: center;
     height: 100vh; /* full viewport height */
     margin: 0 auto;
 }
