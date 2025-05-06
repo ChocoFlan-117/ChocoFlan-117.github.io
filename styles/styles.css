@@ -1,3 +1,9 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 /* Background color
 body {
@@ -66,6 +72,7 @@ h1 {
 } */
 
 .navbar {
+    position: sticky;
     background-color: rgba(0, 0, 0, 0.6);
     box-shadow: 0 0 10px #00ffff33; /* faint glow around */
 
@@ -104,36 +111,35 @@ body {
 /* wiki bio box */
 .wiki-card {
     display: flex;
+    position: relative;
     background-color: rgb(167, 46, 46);
     box-shadow: 0 0 10px rgb(245, 13, 13);
     width: 200px;
     padding: 10px;
     justify-content: center;
     align-items: center;
-    margin: 40px 0 0 660px;
+    margin: 40px 0 0 1200px;
 }
 
-.wiki-writing {
-    
-}
+.wiki-info {
+    width: 700px; /* controls how wide the box is */
+    position: relative;
+    margin: -50px 20px 0 400px;
 
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    color: white;
 }
 
 /* Make the whole body fullscreen and add a background color */
 body {
     font-family: Arial, sans-serif;
     background-color: #181a1a;
-    overflow: hidden; /* Hides anything that goes outside the element's boundaries */
+    overflow-x: hidden; /* Hides anything that goes outside the element's boundaries */
     position: relative;
 
     text-align: center;
     height: 100vh; /* full viewport height */
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
 }
 
 * {
@@ -156,6 +162,58 @@ body {
     text-align: center;
     padding-top: 30px;
 }
+
+.icons {
+    list-style: none; /* Remove the bullet points */
+    gap: 60px; /*adds space between links */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Displays the list items horizontally */
+    justify-content: center; /* centers items horizontally */
+    align-items: center; /* vertically center items */
+}
+
+.linkedin {
+    margin: 0 0 0 0; /* top right bottom left */
+}
+
+.email {
+    margin: 0 0 0 0;
+}
+
+.codewars {
+    margin: 0 0 0 0;
+}
+
+
+.hero {
+    height: 100vh; /* full viewport height */
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.typewriter h1 {
+    overflow: hidden;              /* Ensures hidden text doesn't wrap */
+    border-right: 2px solid white; /* Creates the blinking cursor effect */
+    white-space: nowrap;           /* Keeps the text on one line */
+    width: 0;                      /* Start with no width */
+    animation: typing 3s steps(13), blink 0.7s step-end infinite;
+}
+  
+@keyframes typing {
+    from { width: 0; }
+    to { width: 13ch; } /* 13 characters long */
+}
+  
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+  
+
 
 h1 {
     font-size: 3em;
