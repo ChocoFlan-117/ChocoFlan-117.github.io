@@ -224,7 +224,8 @@ body {
     border-right: 3px solid white; /* Creates the blinking cursor effect */
     white-space: nowrap;           /* Keeps the text on one line */
     width: 0;                      /* Start with no width */
-    animation: typing 3s steps(8) forwards, blink 0.7s step-end infinite;
+    padding-right: 5px;
+    animation: typing 3s steps(8) forwards, blink 0.7s step-end infinite 3s;
 }
   
 @keyframes typing {
