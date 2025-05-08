@@ -144,6 +144,7 @@ body {
     overflow-x: hidden; /* Hides anything that goes outside the element's boundaries */
     position: relative;
 
+    color: white;
     text-align: center;
     height: 100vh; /* full viewport height */
     margin: 0;
@@ -241,8 +242,35 @@ body {
 @keyframes blink {
     50% { border-color: transparent; }
 }
-  
 
+.gallery-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px; /* space between items */
+}
+  
+.gallery {
+    margin: 5px;
+    border: 3px solid #ccc;
+    width: 300px;
+    margin-left: 50px;
+}
+
+.gallery:hover {
+    border: 2px solid #69bbeb;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    
+}
+
+.desc {
+    padding: 15px;
+    text-align: center;
+}
 
 h1 {
     font-size: 3em;
