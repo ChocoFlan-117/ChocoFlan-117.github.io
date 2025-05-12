@@ -78,6 +78,8 @@ h1 {
 
     padding: 10px 20px; /* space *inside* the box */
     /* margin-top: 30px space *outside* the box */
+    z-index: 1000;
+    top: 0;
 }
 
 /* @keyframes glitchTop {
@@ -146,13 +148,17 @@ body {
 
     color: white;
     text-align: center;
-    height: 100vh; /* full viewport height */
+    min-height: 100vh; /* ensures at least full screen */
     margin: 0;
     padding: 0;
 }
 
 * {
-    cursor: url('../assets/Stray\ icon\ cursor.png'), auto; /* Changes the cursor/mouse into the Stray icon */
+    cursor: url('../assets/Stray\ icon\ cursor.png'), default; /* Changes the cursor/mouse into the Stray icon */
+}
+
+a:hover, a:hover img {
+    cursor: url('../assets/Paw\ pointer\ cursor.png'), pointer;
 }
 
 /* Basic content styling */
@@ -257,7 +263,7 @@ body {
     margin-left: 50px;
 }
 
-.gallery:hover {
+.gallery:hover, .desc:hover {
     border: 2px solid #69bbeb;
 }
 
@@ -270,6 +276,8 @@ body {
 .desc {
     padding: 15px;
     text-align: center;
+    border: 1px solid #ccc;
+    margin-top: -4px;
 }
 
 h1 {
