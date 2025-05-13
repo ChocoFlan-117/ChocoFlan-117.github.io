@@ -34,17 +34,17 @@ h1 {
     font-family: "Rock Salt", cursive;
 } */
 
-.navbar ul {
+.custom-navbar ul {
     list-style: none; /* Remove the bullet points */
     gap: 60px; /*adds space between links */
     padding: 0;
     margin: 0;
     display: flex; /* Displays the list items horizontally */
-    justify-content: center; /* centers items horizontally */
+    justify-content: center; /* centers items horizontally */ 
     align-items: center; /* vertically center items */
 }
 
-.navbar a {
+.custom-navbar a {
     position: relative;
     color: #74d4d4;
     text-decoration: none;
@@ -71,7 +71,7 @@ h1 {
     color: #87ddff;
 } */
 
-.navbar {
+.custom-navbar {
     position: sticky;
     background-color: rgba(0, 0, 0, 0.6);
     box-shadow: 0 0 10px #00ffff33; /* faint glow around */
@@ -111,7 +111,7 @@ body {
   
 
 /* wiki bio box */
-.wiki-card {
+/* .wiki-card {
     display: flex;
     position: relative;
     background-color: rgb(167, 46, 46);
@@ -121,22 +121,22 @@ body {
     justify-content: center;
     align-items: center;
     margin: 40px 0 0 1200px;
-}
+} */
 
-.wiki-info {
+/* .wiki-info {
     width: clamp(300px, 60vw, 700px); /* minimum width = 300px, ideal (preferred) width = 60vw, maximum width =  700px */
-    /* Allows for the box to grow and shrink with the page */
+    /* Allows for the box to grow and shrink with the page 
 
     position: relative;
 
-    margin-top: -50px;
+    margin-top: 40px;
     margin-right: 1vw;
     margin-bottom: 0;
-    margin-left: clamp(50px, 15vw, 200px); /* Responsive horizontal positioning */
+    margin-left: clamp(50px, 15vw, 200px); Responsive horizontal positioning
 
     color: white;
     text-align: center;
-}
+} */
 
 
 /* Make the whole body fullscreen and add a background color */
@@ -231,10 +231,10 @@ a:hover, a:hover img {
     border-right: 3px solid white; /* Creates the blinking cursor effect */
     white-space: nowrap;           /* Keeps the text on one line */
     width: 0;                      /* Start with no width */
-    padding-right: 5px;
+    padding-right: 9px;
     animation: typing 3s steps(8) forwards, blink 0.7s step-end infinite 3s;
 }
-  
+
 @keyframes typing {
     from { width: 0; }
     to { width: 8ch; } /* 8 characters long */
@@ -260,7 +260,7 @@ a:hover, a:hover img {
     margin: 5px;
     border: 3px solid #ccc;
     width: 300px;
-    margin-left: 50px;
+    
 }
 
 .gallery:hover, .desc:hover {
@@ -280,9 +280,51 @@ a:hover, a:hover img {
     margin-top: -4px;
 }
 
+@media (max-width: 600px) {
+    .gallery {
+        width: 150px;
+        margin-left: 25px;
+        font-size: 0.9em;
+    }
+
+    .box {
+        font-size: 0.7em;
+        margin: 50px auto;
+        width: 90% !important; /* !important overrides the original width from the box */
+    }
+
+    .box h2 {
+        font-size: 1.7em;
+    }
+
+    .box h5 {
+        font-size: 1.0em;
+    }
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    margin: 5px auto;
+    padding: 5px;
+    border: 5px solid #2ed3afea;
+    width: 50%;
+}
+
+.master-chief {
+    margin-top: 20px;
+    clip-path: circle(50%); 
+    width: 20%; 
+    height: auto;
+    margin-bottom: 20px;
+}
+
 h1 {
     font-size: 3em;
     margin-bottom: 20px;
+    padding: 10px;
 }
 
 p {
